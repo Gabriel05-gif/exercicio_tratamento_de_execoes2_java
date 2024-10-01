@@ -31,11 +31,9 @@ public class Main {
 		try {
 			account.withdraw(amount);
 			System.out.println("Saldo atual: " + String.format("%.2f", account.getBalance()));
-		} 
-		catch (IllegalArgumentException e) {
+		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 		}
-
 
 		sc.close();
 	}
