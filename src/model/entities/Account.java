@@ -46,6 +46,12 @@ public class Account {
 	}
 
 	public void withdraw(double amount) {
+		if (amount > balance) {
+			throw new IllegalArgumentException("Saldo insuficiente");
+		}
+		if (amount > withdrawLimit) {
+			throw new IllegalArgumentException("Limite de saque excedido");
+		}
 		balance -= amount;
 	}
 }
